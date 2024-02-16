@@ -3,7 +3,7 @@ The code contained here will scrape the data from websites.
 
 Scrape_file
  Before we begin, install scrapy and set up the environment. You want to then create a file named scrape. 
-1) First, in that file you made above, type "scrapy genspider twitchdata https://sullygnome.com/games/streamed"
+1) First, in that file you made above, type "scrapy genspider twitchdata sullygnome.com/games/streamed"
 This will create the spider file. Now copy and paste get_twitchdata.py I provided and run the file (further instruction is in the get_twitchdata.py)
 2) Go to the scrape file and type in "scrapy genspider get_prize api.esportsearnings.com" in the terminal. 
 copy and paste the get_prize.py I provided and run the code. 
