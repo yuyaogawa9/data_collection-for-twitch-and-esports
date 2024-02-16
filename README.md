@@ -10,4 +10,5 @@ copy and paste the get_prize.py I provided and run the code.
 3) Unfortunately above dataset does not contain the name of each games, thus we will have to run get_names.py to obtain the names of each games (Run the code exactly the same way as above.) We will later merge this with the data obtained in step2 using the GameID as a key.
 4) Then, run country_lang.py to obtain the language spoken in each countries. We will use this later when identifying the language in each countries.
 
+After above step is done, you should have four csv files that are attached here. 
 
