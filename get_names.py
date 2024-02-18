@@ -23,10 +23,7 @@ class GetNamesSpider(scrapy.Spider):
         for i in unique_game_ids:
             gameid=str(i)
             link = f"http://api.esportsearnings.com/v0/LookupGameById{api_key}&gameid={gameid}&format=json"
-            yield scrapy.Request(url=link, callback=self.parse, meta={"gameID": gameid},
-                                headers={
-                                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-                                        })
+            yield scrapy.Request(url=link, callback=self.parse, meta={"gameID": gameid})
             
             
 
