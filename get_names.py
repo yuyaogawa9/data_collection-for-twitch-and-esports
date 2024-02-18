@@ -1,17 +1,16 @@
 import scrapy
 import json
 import pandas as pd
-from time import sleep
 
 
-# Before running the code make sure to go to settings.py and verify the USER_AGENT key is set. 
 # Make sure that scrapy is installed. 
+# Website only allows accessing API once per second. Go to settings.py and set DOWNLOAD_DELAY=1.0
 # To run the code set the directory in the terminal and type: "scrapy crawl get_names -o game_names.csv "
 # Above code will save the result in csv file. 
 
 # Here, we will use the GameID contained in the dataset prize_money.csv to get GameNames. 
 
-df = pd.read_csv('prize_money.csv') # <-You might want to provide the absolute path if it does not work. 
+df = pd.read_csv('prize.csv') # <-You might want to provide the absolute path if it does not work. 
 unique_game_ids = pd.unique(df['GameId']).tolist()
 
 
@@ -22,7 +21,6 @@ class GetNamesSpider(scrapy.Spider):
     def start_requests(self):
         api_key = "?apikey=YourAPIkey" # <- Put your API key after the equality sign. 
         for i in unique_game_ids:
-            sleep(1.2)
             gameid=str(i)
             link = f"http://api.esportsearnings.com/v0/LookupGameById{api_key}&gameid={gameid}&format=json"
             yield scrapy.Request(url=link, callback=self.parse, meta={"gameID": gameid},
