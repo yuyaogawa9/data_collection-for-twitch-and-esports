@@ -4,7 +4,7 @@ import json
 # Make sure that scrapy is installed. 
 # Before running the code make sure to go to settings.py and verify the USER_AGENT key is set. 
 # Website only allows accessing API once per second. Go to settings.py and set DOWNLOAD_DELAY=1.0
-# To run the code set the directory in the terminal and type: "scrapy crawl get_prize -o prize.csv "
+# To run the code set the directory in the terminal and type: "scrapy crawl get_prize -o prize_money.csv "
 # Above code will save the result in csv file. 
 
 class GetPrizeSpider(scrapy.Spider):
