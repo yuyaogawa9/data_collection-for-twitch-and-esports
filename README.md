@@ -14,7 +14,7 @@ After above step is done, you should have four csv files named game_names.csv, t
 In the research, we will use four data from above plus broadband data which is accessible https://ourworldindata.org/grapher/broadband-penetration-by-country?tab=table
 Download data from above and name it broadband.csv.
 
-We will now clean the data. 
+We will now clean the data using clean_data.ipynb.
 
 
  
